@@ -1,5 +1,7 @@
 DEPENDS="readline" 
 
+BBCLASSEXTEND="native"
+
 SRC_URI="hg://hg.code.sf.net/p/clisp;module=clisp;protocol=http;rev=tip;"
 
 LICENSE="GPLv2"
