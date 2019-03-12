@@ -5,7 +5,7 @@ BBCLASSEXTEND="native"
 SRC_URI="hg://hg.code.sf.net/p/clisp;module=clisp;protocol=http;rev=tip;"
 
 LICENSE="GPLv2"
-LIC_FILES_CHKSUM="file://GNU-GPL;md5=b234ee4d69f5fce4486a80fdaf4a4263"
+LIC_FILES_CHKSUM="file://GNU-GPL;md5=6596adfdd6a87b1d04c38c2bd05de0cd"
 
 S="${WORKDIR}/clisp"
 
