@@ -13,7 +13,7 @@ LIC_FILES_CHKSUM="file://GNU-GPL;md5=6596adfdd6a87b1d04c38c2bd05de0cd"
 
 S="${WORKDIR}/clisp"
 
-inherit autotools pkgconfig
+inherit autotools pkgconfig gettext
 
 do_configure() {
 
