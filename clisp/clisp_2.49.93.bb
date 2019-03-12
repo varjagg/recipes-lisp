@@ -15,6 +15,15 @@ S="${WORKDIR}/clisp"
 
 inherit autotools pkgconfig
 
+do_configure() {
+
+	if [ -e ${CONFIGURE_SCRIPT} ]; then
+		oe_runconf
+	else
+		bbnote "nothing to configure"
+	fi
+}
+
 CONFIGUREOPTS = " --build=${BUILD_SYS} \
 		  --host=${HOST_SYS} \
 		  --prefix=${prefix} \
