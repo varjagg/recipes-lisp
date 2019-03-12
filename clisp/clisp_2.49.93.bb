@@ -19,7 +19,7 @@ CONFIGUREOPTS = " --build=${BUILD_SYS} \
 		  --host=${HOST_SYS} \
 		  --prefix=${prefix} \
 		  --exec_prefix=${exec_prefix} \
-		  --srcdir=${S}/src \
+		  --srcdir=${S} \
 		  --bindir=${bindir} \
 		  --datadir=${datadir} \
 		  --libdir=${libdir} \
