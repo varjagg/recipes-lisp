@@ -13,6 +13,8 @@ LIC_FILES_CHKSUM="file://GNU-GPL;md5=6596adfdd6a87b1d04c38c2bd05de0cd"
 
 S="${WORKDIR}/clisp"
 
+inherit autotools pkgconfig
+
 CONFIGUREOPTS = " --build=${BUILD_SYS} \
 		  --host=${HOST_SYS} \
 		  --prefix=${prefix} \
@@ -32,8 +34,6 @@ CONFIGUREOPTS = " --build=${BUILD_SYS} \
 		  --disable-silent-rules \
 		  ${CONFIGUREOPT_DEPTRACK} \
 		  ${@append_libtool_sysroot(d)}"
-
-inherit autotools pkgconfig
 
 EXTRA_OECONF += "--ignore-absence-of-libsigsegv \
 	"
