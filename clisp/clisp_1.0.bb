@@ -9,7 +9,7 @@ LIC_FILES_CHKSUM="file://GNU-GPL;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
 S="${WORKDIR}/clisp"
 
-inherit autoconf pkgconfig
+inherit autotools pkgconfig
 
 EXTRA_OECONF += "--ignore-absence-of-libsigsegv \
 	"
