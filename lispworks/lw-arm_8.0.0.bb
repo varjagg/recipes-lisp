@@ -19,7 +19,7 @@ inherit qemu
 
 do_configure() {
     # the license key and serial have to be set in environment variables
-    qemu-arm -L ${S}/qemu/arm-linux-libs ${S}/lw80-arm-linux/lispworks-8-0-0-arm-linux --lwlicenseserial ${LW_SERIAL} --lwlicensekey ${LW_KEY}
+    qemu-arm -L ${S}/qemu/arm-linux-libs ${S}/lispworks-8-0-0-arm-linux --lwlicenseserial ${LW_SERIAL} --lwlicensekey ${LW_KEY}
 }
 
 do_compile() {
