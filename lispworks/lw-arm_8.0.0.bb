@@ -27,4 +27,9 @@ do_configure() {
 do_install_append() {
     install -d ${D}/${bindir}
     install -Dm 0755 ${S}/lwc ${D}/${bindir}/
+    install -d ${D}/${datadir}/lispworks
+    install -m 0755 ${S}/lispworks-8-0-0-arm-linux ${D}/${datadir}/lispworks/
+    install -m 0644 ${S}/lwlicense ${D}/${datadir}/lispworks/
+    cp -r ${S}/qemu ${D}/${datadir}/lispworks/
+    cp -r ${S}/lib ${D}/${datadir}/lispworks/
 }
