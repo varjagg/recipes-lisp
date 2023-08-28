@@ -21,8 +21,8 @@ do_configure() {
     # the license key and serial have to be set in environment variables
     qemu-arm -L ${S}/qemu/arm-linux-libs ${S}/lispworks-8-0-0-arm-linux --lwlicenseserial ${LW_SERIAL} --lwlicensekey ${LW_KEY}
 }
-
-do_compile() {
+    # the license key and serial have to be set in environment variables (e.g. local.conf)
+    qemu-arm -L ${S}/qemu/arm-linux-libs ${S}/lispworks-8-0-0-arm-linux --lwlicenseserial ${LW_S} --lwlicensekey ${LW_K}
 }
 
 do_install_append() {
