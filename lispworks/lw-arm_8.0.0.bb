@@ -4,6 +4,8 @@ BBCLASSEXTEND="native"
 
 DEPENDS+="qemu-native"
 
+INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
+
 FILESEXTRAPATHS_prepend := "${THISDIR}/scripts/:"
 
 # change to the actual path in your FS/container mapping
