@@ -15,7 +15,7 @@ LICENSE="CLOSED"
 
 S="${WORKDIR}"
 
-inherit qemu
+inherit native
 
 do_configure() {
     # the license key and serial have to be set in environment variables
