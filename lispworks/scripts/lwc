@@ -1,0 +1,3 @@
+#!/bin/sh
+
+qemu-arm -L ${S}/qemu/arm-linux-libs ${S}/lw80-arm-linux/lispworks-8-0-0-arm-linux "$@"
