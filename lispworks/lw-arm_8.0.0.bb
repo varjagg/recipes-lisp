@@ -26,4 +26,6 @@ do_compile() {
 }
 
 do_install_append() {
+    install -d ${D}/${bindir}
+    install -Dm 0755 ${S}/lwc ${D}/${bindir}/
 }
