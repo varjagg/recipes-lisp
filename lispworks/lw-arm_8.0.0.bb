@@ -27,19 +27,19 @@ LICENSE="CLOSED"
 
 S="${WORKDIR}"
 
-inherit native
-
 do_configure() {
     # the license key and serial have to be set in environment variables (e.g. local.conf)
     qemu-arm -L ${S}/qemu/arm-linux-libs ${S}/lispworks-8-0-0-arm-linux --lwlicenseserial ${LW_S} --lwlicensekey ${LW_K}
 }
 
+lwdir="${D}/${datadir}/lispworks"
+
 do_install_append() {
     install -d ${D}/${bindir}
     install -Dm 0755 ${S}/lwc ${D}/${bindir}/
-    install -d ${D}/${datadir}/lispworks
-    install -m 0755 ${S}/lispworks-8-0-0-arm-linux ${D}/${datadir}/lispworks/
-    install -m 0644 ${S}/lwlicense ${D}/${datadir}/lispworks/
-    cp -r ${S}/qemu ${D}/${datadir}/lispworks/
-    cp -r ${S}/lib ${D}/${datadir}/lispworks/
+    install -d ${lwdir}
+    install -m 0644 ${S}/lispworks-8-0-0-arm-linux ${lwdir}/
+    install -m 0644 ${S}/lwlicense ${lwdir}/
+    cp -r ${S}/qemu ${lwdir}/
+    cp -r ${S}/lib ${lwdir}/
 }
