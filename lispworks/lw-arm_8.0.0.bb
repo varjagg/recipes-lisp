@@ -5,10 +5,20 @@ BBCLASSEXTEND="native"
 DEPENDS+="qemu-native"
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
+INHIBIT_PACKAGE_STRIP = "1"
+INHIBIT_SYSROOT_STRIP = "1"
+INHIBIT_DEFAULT_DEPS = "1"
+
+inherit native
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/scripts/:"
 
-# change to the actual path in your FS/container mapping
+FILES_${PN} += "  \
+	${datadir}/lispworks/** \
+	${bindir}/lwc \
+"
+
+# change to the actual path in your FS/container mapping of the archives
 SRC_URI+="file:///lispworks/lw80-arm-linux.tar.gz"
 SRC_URI+="file:///lispworks/qemu-libs.tar.gz"
 SRC_URI+="file://lwc"
