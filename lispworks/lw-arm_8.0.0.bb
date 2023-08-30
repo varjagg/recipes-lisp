@@ -1,4 +1,4 @@
-SUMMARY="LispWorks Common Lisp implementation for ARM"
+SUMMARY="LispWorks Common Lisp implementation for ARM target"
 
 BBCLASSEXTEND="native"
 
