@@ -1,5 +1,6 @@
 #!/bin/sh
 
-cd /usr/share/lispworks/
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
 
 qemu-arm -L qemu/arm-linux-libs lispworks-8-0-0-arm-linux "$@"
