@@ -20,6 +20,7 @@ FILES_${PN} += "  \
 
 # change to the actual path in your FS/container mapping of the archives
 SRC_URI+="file:///lispworks/lw80-arm-linux.tar.gz"
+SRC_URI+="file:///lispworks/lw80-patches1-arm-linux.tar.gz"
 SRC_URI+="file:///lispworks/qemu-libs.tar.gz"
 SRC_URI+="file://lwc"
 
