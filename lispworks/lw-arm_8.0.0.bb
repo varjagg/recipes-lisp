@@ -11,7 +11,7 @@ INHIBIT_DEFAULT_DEPS = "1"
 
 inherit native
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/scripts/:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/scripts/:"
 
 FILES_${PN} += "  \
 	${datadir}/lispworks/** \
@@ -35,7 +35,7 @@ do_configure() {
 
 lwdir="${D}/${datadir}/lispworks"
 
-do_install_append() {
+do_install:append() {
     install -d ${D}/${bindir}
     install -Dm 0755 ${S}/lwc ${D}/${bindir}/
     install -d ${lwdir}
