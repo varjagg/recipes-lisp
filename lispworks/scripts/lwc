@@ -6,6 +6,7 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 LWDIR="${SCRIPTPATH}/../share/lispworks"
 export HOME=$LWDIR
 export XDG_CACHE_HOME="${LWDIR}/.cache/"
+export LD_LIBRARY_PATH="${PWD}/../recipe-sysroot/usr/lib"
 
 # FIXME: we install LW binary without exec permissions and set them here
 # because otherwise something in Yocto changes its dynamic interpreter
