@@ -11,6 +11,6 @@ export LD_LIBRARY_PATH="${PWD}/../recipe-sysroot/usr/lib"
 # FIXME: we install LW binary without exec permissions and set them here
 # because otherwise something in Yocto changes its dynamic interpreter
 # (ld-linux) to x86 arch during sysroot population stage
-chmod 755 $LWDIR/lispworks-8-0-0-arm-linux
+chmod 755 $LWDIR/lispworks-8-1-0-arm-linux
 
-qemu-arm -L $LWDIR/qemu/arm-linux-libs $LWDIR/lispworks-8-0-0-arm-linux "$@"
+qemu-arm -L $LWDIR/qemu/arm-linux-libs $LWDIR/lispworks-8-1-0-arm-linux "$@"
